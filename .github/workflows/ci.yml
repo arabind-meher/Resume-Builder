@@ -29,4 +29,6 @@ jobs:
         run: uv sync
 
       - name: Run app check
+        env:
+          DATABASE_URL: ${{ vars.DATABASE_URL }}
         run: uv run python -c "from app import create_app; create_app()"
