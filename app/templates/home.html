@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="text-center py-16">
+
+    <h1 class="text-4xl font-bold text-gray-900">
+        Resume Builder
+    </h1>
+
+    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        A simple tool to build and manage tailored resumes for different job applications.
+        Create resumes, edit experiences, and keep track of your application history in one place.
+    </p>
+
+    <div class="mt-8">
+        <a href="{{ url_for('main.editor') }}"
+           class="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800">
+            Start Building Resume
+        </a>
+    </div>
+
+</div>
+
+
+<div class="grid md:grid-cols-3 gap-6 mt-16">
+
+    <div class="bg-white shadow rounded-lg p-6">
+        <h3 class="font-semibold text-lg">Create Resume</h3>
+        <p class="text-gray-600 mt-2">
+            Easily add your education, experience, skills, and projects to generate professional resumes.
+        </p>
+    </div>
+
+    <div class="bg-white shadow rounded-lg p-6">
+        <h3 class="font-semibold text-lg">Customize for Jobs</h3>
+        <p class="text-gray-600 mt-2">
+            Tailor your resume for different job applications without rewriting everything.
+        </p>
+    </div>
+
+    <div class="bg-white shadow rounded-lg p-6">
+        <h3 class="font-semibold text-lg">Track Applications</h3>
+        <p class="text-gray-600 mt-2">
+            Keep a history of your job applications and the resumes used for each one.
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}
